@@ -1,0 +1,61 @@
+/* =========================================== GERAL ===================================================*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* =========================================== HEADER ===================================================*/
+h1{
+    text-align: center;
+    padding: 10px;
+    color: whitesmoke;
+    background-color: teal;
+    font-family: 'Fira Sans', sans-serif;
+}
+header{
+    margin: 5vh;
+}
+/* =========================================== MAIN ===================================================*/
+.containerConversor{
+    padding: 10px;
+    margin: 2px;
+    border: 5px solid brown;
+}
+
+h2{
+    text-align: center;
+}
+/* =========================================== DISPLAY ===================================================*/
+
+.boxDisplayBtn{
+    text-align: center;
+}
+
+.display{
+width: 50vh;
+height: 5vh;
+}
+
+/* =========================================== BOTÕES ===================================================*/
+.botoesNumeros{
+display: flex;
+justify-content: center;
+padding: 10px;
+}
+
+.btnNum{
+    padding: 10px;
+    margin: 5px;
+}
+/* =========================================== FOOTER ===================================================*/
+footer{
+    text-align: center;
+    padding: 10px;
+    color: whitesmoke;
+    background-color: teal;
+    font-family: 'Fira Sans', sans-serif;
+}
+a{
+    color: whitesmoke;
+}
