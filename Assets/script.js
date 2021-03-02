@@ -25,6 +25,7 @@ botaoRefreshBin.onclick = function () {
 
 
 //Conversor Dec2Bin
+
 var botaoDec0 = document.querySelector('#btnDec0');
 var botaoDec1 = document.querySelector('#btnDec1');
 var botaoDec2 = document.querySelector('#btnDec2');
