@@ -3,80 +3,48 @@
 
 var botaoBin1 = document.querySelector("#btnBin1");
 var botaoBin0 = document.querySelector("#btnBin0");
-
-botaoBin1.onclick = function () {
-    document.querySelector("#displayBin").value = document.querySelector("#displayBin").value + botaoBin1.value
-}
-
-botaoBin0.onclick = function () {
-    document.querySelector("#displayBin").value = document.querySelector("#displayBin").value + botaoBin0.value
-}
-
+var displayBin = document.querySelector("#displayBin");
 var botaoConvBin = document.querySelector("#btnConverterBin");
-botaoConvBin.onclick = function () {
-    document.querySelector("#displayBin").value = parseInt(document.querySelector("#displayBin").value, 2);
+var botaoRefreshBin = document.querySelector("#btnRefreshBin");
+
+botaoBin1.addEventListener("click", changeDisplayBin)
+botaoBin0.addEventListener("click", changeDisplayBin)
+function changeDisplayBin() {
+    displayBin.value = displayBin.value + this.value
 }
 
-var botaoRefreshBin = document.querySelector("#btnRefreshBin");
-botaoRefreshBin.onclick = function () {
+botaoConvBin.addEventListener("click",convertDisplayBin)
+function convertDisplayBin() {
+    displayBin.value = parseInt(displayBin.value, 2);
+}
 
-    document.querySelector("#displayBin").value = " ";
+botaoRefreshBin.addEventListener("click",refreshDisplayBin)
+function refreshDisplayBin(){
+    displayBin.value = " ";
 }
 
 
 //Conversor Dec2Bin
 
-var botaoDec0 = document.querySelector('#btnDec0');
-var botaoDec1 = document.querySelector('#btnDec1');
-var botaoDec2 = document.querySelector('#btnDec2');
-var botaoDec3 = document.querySelector('#btnDec3');
-var botaoDec4 = document.querySelector('#btnDec4');
-var botaoDec5 = document.querySelector('#btnDec5');
-var botaoDec6 = document.querySelector('#btnDec6');
-var botaoDec7 = document.querySelector('#btnDec7');
-var botaoDec8 = document.querySelector('#btnDec8');
-var botaoDec9 = document.querySelector('#btnDec9');
-
-botaoDec1.onclick = function () {
-    document.querySelector("#displayDec").value = document.querySelector("#displayDec").value + botaoDec1.value
-}
-botaoDec2.onclick = function () {
-    document.querySelector("#displayDec").value = document.querySelector("#displayDec").value + botaoDec2.value
-}
-botaoDec3.onclick = function () {
-    document.querySelector("#displayDec").value = document.querySelector("#displayDec").value + botaoDec3.value
-}
-botaoDec4.onclick = function () {
-    document.querySelector("#displayDec").value = document.querySelector("#displayDec").value + botaoDec4.value
-}
-botaoDec5.onclick = function () {
-    document.querySelector("#displayDec").value = document.querySelector("#displayDec").value + botaoDec5.value
-}
-botaoDec6.onclick = function () {
-    document.querySelector("#displayDec").value = document.querySelector("#displayDec").value + botaoDec6.value
-}
-botaoDec7.onclick = function () {
-    document.querySelector("#displayDec").value = document.querySelector("#displayDec").value + botaoDec7.value
-}
-botaoDec8.onclick = function () {
-    document.querySelector("#displayDec").value = document.querySelector("#displayDec").value + botaoDec8.value
-}
-botaoDec9.onclick = function () {
-    document.querySelector("#displayDec").value = document.querySelector("#displayDec").value + botaoDec9.value
-}
-botaoDec0.onclick = function () {
-    document.querySelector("#displayDec").value = document.querySelector("#displayDec").value + botaoDec0.value
-}
-
-
+var displayDec = document.querySelector("#displayDec");
+var botoesDec = document.querySelectorAll('.btnDec');
 var botaoConvDec = document.querySelector("#btnConverterDec");
-botaoConvDec.onclick = function () {
-    document.querySelector("#displayDec").value = parseInt(document.querySelector("#displayDec").value, 10).toString(2);
+var botaoRefreshDec = document.querySelector("#btnRefreshDec");
+
+for (let idx = 0; idx < botoesDec.length; idx++) {
+    botoesDec[idx].addEventListener("click", changeDisplayDec)
+}
+function changeDisplayDec(){
+    displayDec.value = displayDec.value + this.value
 }
 
-var botaoRefreshDec = document.querySelector("#btnRefreshDec");
-botaoRefreshDec.onclick = function () {
+botaoConvDec.addEventListener("click",convertDisplayDec)
+function convertDisplayDec(){
+    displayDec.value = parseInt(displayDec.value, 10).toString(2);
+}
 
-    document.querySelector("#displayDec").value = " ";
+botaoRefreshDec.addEventListener ("click", refreshDisplayDec )
+function refreshDisplayDec(){
+    displayDec.value = " ";
 }
 
